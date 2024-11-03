@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #1a1a1d;
+    color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Updated gradient */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.nav-links li a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a i {
+    margin-right: 0.5rem;
+}
+
+.nav-links li a:hover {
+    color: #ff6ec4;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default, shown in mobile view */
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #f3f3f3;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-bar {
+    width: 200px; /* Adjust size as needed */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    position: relative;
+    right: 30px; /* Position it closer to the search bar */
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Programming Languages Section */
+.code-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2a2a2e;
+}
+
+.code-section h2 {
+    font-size: 2.5rem;
+    color: #ff6ec4;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    margin-right: 5px;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.search-bar:focus {
+    border: 2px solid #ff6ec4; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.language-card {
+    background: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #f3f3f3;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.language-card i {
+    font-size: 3rem;
+    color: #ff6ec4;
+}
+
+.language-card h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.language-card:hover {
+    transform: translateY(-10px);
+    background: #444;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #f3f3f3;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.socials a {
+    color: #f3f3f3;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #ff6ec4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger in mobile view */
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+   .nav-links {
+        display: none; /* Hide nav links initially */
+        flex-direction: column; /* Stack nav links vertically */
+        position: absolute; /* Positioning for dropdown effect */
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        background: #333; /* Match with your navbar color */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .home-section h1 {
+        font-size: 3rem;
+    }
+
+    .home-section p {
+        font-size: 1.2rem;
+    }
+
+    .code-section h2 {
+        font-size: 2rem;
+    }
+
+    .language-card {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-section p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .socials a {
+        font-size: 1rem;
+    }
+}
+
+
+.hamburger {
+    display: none; /* Hidden by default, shown in mobile view */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f3f3f3;
+    margin: 3px 0;
+    transition: 0.4s;
+}

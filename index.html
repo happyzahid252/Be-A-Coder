@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a Coder</title>
+    <link rel="stylesheet" href="styles.css">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Be A Coder.png" alt="Be a Coder Logo" height="60" width="120">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="code.html"><i class="fas fa-code"></i> Code</a></li>
+                <li><a href="learn.html"><i class="fas fa-book"></i> Learn</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li class="dropdown">
+                    <a href="languages.html"><i class="fas fa-language"></i> Languages <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fab fa-html5"></i> HTML</a>
+                        <a href="#"><i class="fab fa-css3-alt"></i> CSS</a>
+                        <a href="#"><i class="fab fa-js-square"></i> JavaScript</a>
+                        <a href="#"><i class="fab fa-php"></i> PHP</a>
+                        <a href="#"><i class="fab fa-python"></i> Python</a>
+                        <a href="#"><i class="fas fa-database"></i> MySQL</a>
+                        <a href="#"><i class="fas fa-server"></i> Oracle</a>
+                    </div>
+                </li>
+                <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+               
+<ul style="list-style-type: none; padding: 0; margin: 20px;">
+    <ul style="list-style-type: none; padding: 0; margin: 20px;">
+        <li style="display: flex; align-items: center; margin: 20px;">
+            <input type="text" placeholder="Search..." class="search-bar" style="padding: 10px; border-radius: 5px; border: none; width: 200px; margin-right: 5px;" onkeypress="handleKey(event)">
+            <i class="fas fa-search" style="color: white; cursor: pointer;"></i>
+        </li>
+    </ul>
+    <script>
+        function searchSection() {
+            const input = document.querySelector('.search-bar').value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+    
+            // Variable to track if a match is found
+            let found = false;
+    
+            // Iterate through each section to check for the input
+            sections.forEach(section => {
+                // Check if the section text includes the input
+                if (section.innerText.toLowerCase().includes(input)) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    found = true; // A match was found
+                    return; // Exit loop after finding the first match
+                }
+            });
+    
+            // If no section was found, alert the user
+            if (!found) {
+                alert('Section not found!');
+            }
+        }
+    
+        function handleKey(event) {
+            if (event.key === 'Enter') {
+                searchSection();
+                event.preventDefault(); // Prevent default space behavior (scrolling)
+            }
+        }
+    </script>
+    
+
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+
+
+
+
+
+
+    <section id="home" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #ff6ec4, #7873f5); color: #f3f3f3; padding: 20px; overflow: hidden;">
+        <h1 id="typing-text" style="font-size: 4rem; white-space: nowrap; overflow: hidden; border-right: 5px solid #f3f3f3; animation: blink 0.75s step-end infinite; margin: 0;"></h1>
+        <p style="font-size: 1.5rem; margin: 1.5rem 0; max-width: 600px;">Your journey to mastering programming starts here. Learn, code, and innovate with us!</p>
+    
+        <div class="programming-logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 2rem;">
+            <i class="fab fa-html5" style="font-size: 50px; color: #e44d26;"></i>
+            <i class="fab fa-css3-alt" style="font-size: 50px; color: #1572B6;"></i>
+            <i class="fab fa-js-square" style="font-size: 50px; color: #F7DF1E;"></i>
+            <i class="fab fa-java" style="font-size: 50px; color: #007396;"></i>
+            <i class="fab fa-php" style="font-size: 50px; color: #8892BE;"></i>
+            <i class="fas fa-database" style="font-size: 50px; color: #00758F;"></i>
+            <i class="fas fa-server" style="font-size: 50px; color: #E95E32;"></i>
+            <i class="fab fa-python" style="font-size: 50px; color: #3776AB;"></i>
+            <i class="fab fa-django" style="font-size: 50px; color: #0F4B2E;"></i>
+        </div>
+    
+        <div>
+            <a href="register.html" class="btn" style="padding: 1rem 2rem; border: none; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1.2rem; margin: 0 10px; background: #ff6ec4; transition: background 0.3s, transform 0.3s; display: inline-block;">
+                <i class="fas fa-user-plus"></i> Register
+            </a>
+            <a href="learn.html" class="btn" style="padding: 1rem 2rem; border: none; color: #fff; text-decoration: none; border-radius: 5px; font-size: 1.2rem; margin: 0 10px; background: #ff6ec4; transition: background 0.3s, transform 0.3s; display: inline-block;">
+                <i class="fas fa-book-open"></i> Learn
+            </a>
+        </div>
+    
+        <script>
+            const text = "BE A CODER";
+            const typingTextElement = document.getElementById("typing-text");
+            let index = 0;
+            let isErasing = false;
+    
+            function type() {
+                if (index < text.length && !isErasing) {
+                    typingTextElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 150);
+                } else if (index === text.length) {
+                    isErasing = true;
+                    setTimeout(erase, 2000); // Wait before starting to erase
+                }
+            }
+    
+            function erase() {
+                if (index > 0 && isErasing) {
+                    typingTextElement.textContent = text.substring(0, index - 1);
+                    index--;
+                    setTimeout(erase, 75);
+                } else if (index === 0) {
+                    isErasing = false;
+                    setTimeout(type, 1000); // Wait before starting to type again
+                }
+            }
+    
+            type(); // Start typing animation
+        </script>
+    </section>
+            
+    <section id="code" class="code-section">
+        <h2>Programming Languages</h2>
+        <div class="languages-grid">
+            <div class="language-card" data-aos="zoom-in">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-php"></i>
+                <h3>PHP</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fas fa-database"></i>
+                <h3>MySQL</h3>
+            </div>
+            <div class="language-card" data-aos="zoom-in" data-aos-delay="600">
+                <i class="fas fa-server"></i>
+                <h3>Oracle</h3>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">HTML Structure Example</h2>
+            
+            <pre id="codeSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;title&gt;My Website&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+    
+        &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+        &lt;p&gt;This is a sample paragraph in the main content area.&lt;/p&gt;
+    
+      &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('codeSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function copyToClipboard(elementId) {
+            const codeSnippet = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(codeSnippet).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    
+        function toggleBackground() {
+            const snippet = document.getElementById('codeSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">CSS Basics Example</h2>
+            
+            <pre id="cssSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    /* Basic CSS styling for a webpage */
+    
+    body {
+        background-color: #f4f4f9; /* Light background color */
+        font-family: Arial, sans-serif; /* Sets font style */
+        color: #333; /* Dark text color */
+    }
+    
+    h1 {
+        color: #ff6ec4; /* Main heading color */
+        text-align: center; /* Center-aligns text */
+        font-size: 2.5rem; /* Large font size */
+    }
+    
+    p {
+        line-height: 1.6; /* Improves readability */
+        font-size: 1rem; /* Standard paragraph size */
+        margin: 10px 0; /* Adds space above and below */
+    }
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('cssSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleCssBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleCssBackground() {
+            const snippet = document.getElementById('cssSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">JavaScript Basics Example</h2>
+            
+            <pre id="jsSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    // A simple JavaScript function to greet the user
+    
+    function greetUser(name) {
+        const greeting = "Hello, " + name + "!";
+        console.log(greeting);
+    }
+    
+    // Call the function with a name
+    greetUser("Alice");
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('jsSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleJsBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleJsBackground() {
+            const snippet = document.getElementById('jsSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">Java Basics Example</h2>
+            
+            <pre id="javaSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    // A simple Java class to greet the user
+    
+    public class HelloWorld {
+        public static void main(String[] args) {
+            String name = "Alice";
+            greetUser(name);
+        }
+    
+        public static void greetUser(String name) {
+            System.out.println("Hello, " + name + "!");
+        }
+    }
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('javaSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleJavaBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleJavaBackground() {
+            const snippet = document.getElementById('javaSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">PHP Basics Example</h2>
+            
+            <pre id="phpSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    &lt;?php
+    // A simple PHP script to greet the user
+    
+    $name = "Alice";
+    greetUser($name);
+    
+    function greetUser($name) {
+        echo "Hello, " . $name . "!";
+    }
+    ?&gt;
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('phpSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="togglePhpBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function togglePhpBackground() {
+            const snippet = document.getElementById('phpSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">SQL Basics with Example</h2>
+            
+            <pre id="sqlSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    -- Create a table named 'employees'
+    CREATE TABLE employees (
+        id INT PRIMARY KEY AUTO_INCREMENT,        -- Unique identifier for each employee
+        name VARCHAR(100) NOT NULL,               -- Employee's name
+        age INT NOT NULL,                          -- Employee's age
+        department VARCHAR(50),                    -- Department where the employee works
+        hire_date DATE DEFAULT CURRENT_DATE       -- The date when the employee was hired
+    );
+    
+    -- Insert some sample data into the 'employees' table
+    INSERT INTO employees (name, age, department) VALUES
+    ('Alice Smith', 30, 'Engineering'),
+    ('Bob Johnson', 25, 'Marketing'),
+    ('Charlie Brown', 35, 'Finance');
+    
+    -- Query to select all employees
+    SELECT * FROM employees;
+    
+    -- Query to find employees in the Engineering department
+    SELECT * FROM employees WHERE department = 'Engineering';
+    
+    -- Update an employee's information
+    UPDATE employees SET age = 31 WHERE name = 'Alice Smith';
+    
+    -- Delete an employee from the table
+    DELETE FROM employees WHERE name = 'Bob Johnson';
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('sqlSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleSqlBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+            
+            <h3 style="margin-top: 20px; color: #fff; font-size: 1.5rem;">Explanation:</h3>
+            <ul style="color: #fff; font-size: 1rem; line-height: 1.5;">
+                <li><strong>CREATE TABLE</strong>: This command creates a new table called 'employees' with defined columns and data types.</li>
+                <li><strong>INSERT INTO</strong>: This command adds new records into the 'employees' table.</li>
+                <li><strong>SELECT</strong>: This command retrieves data from the table; the first query gets all employees, and the second query filters for those in the Engineering department.</li>
+                <li><strong>UPDATE</strong>: This command modifies existing records in the table. Here, it updates Alice's age.</li>
+                <li><strong>DELETE</strong>: This command removes records from the table, used here to delete Bob Johnson's entry.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        function toggleSqlBackground() {
+            const snippet = document.getElementById('sqlSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">Oracle SQL Basics with Example</h2>
+            
+            <pre id="oracleSqlSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    -- Create a table named 'departments'
+    CREATE TABLE departments (
+        department_id NUMBER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,  -- Unique identifier for each department
+        department_name VARCHAR2(50) NOT NULL,                               -- Name of the department
+        location VARCHAR2(100)                                               -- Location of the department
+    );
+    
+    -- Insert sample data into the 'departments' table
+    INSERT INTO departments (department_name, location) VALUES
+    ('Sales', 'New York'),
+    ('Marketing', 'Los Angeles'),
+    ('Engineering', 'San Francisco');
+    
+    -- Query to select all departments
+    SELECT * FROM departments;
+    
+    -- Query to find a department by name
+    SELECT * FROM departments WHERE department_name = 'Sales';
+    
+    -- Update a department's location
+    UPDATE departments SET location = 'Chicago' WHERE department_name = 'Marketing';
+    
+    -- Delete a department from the table
+    DELETE FROM departments WHERE department_name = 'Sales';
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('oracleSqlSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="toggleOracleBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+            
+            <h3 style="margin-top: 20px; color: #fff; font-size: 1.5rem;">Explanation:</h3>
+            <ul style="color: #fff; font-size: 1rem; line-height: 1.5;">
+                <li><strong>CREATE TABLE</strong>: This command creates a new table called 'departments' with defined columns and data types.</li>
+                <li><strong>INSERT INTO</strong>: This command adds new records into the 'departments' table.</li>
+                <li><strong>SELECT</strong>: This command retrieves data from the table; the first query gets all departments, and the second query filters for a specific department.</li>
+                <li><strong>UPDATE</strong>: This command modifies existing records in the table. Here, it updates the location of the Marketing department.</li>
+                <li><strong>DELETE</strong>: This command removes records from the table, used here to delete the Sales department.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        function toggleOracleBackground() {
+            const snippet = document.getElementById('oracleSqlSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+
+    
+
+
+
+
+
+
+
+
+
+    <section style="padding: 20px; background-color: #2a2a2e; color: #fff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 25px; background: linear-gradient(135deg, #ff6ec4, #7873f5); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);">
+            <h2 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 20px;">Python Basics with Example</h2>
+            
+            <pre id="pythonSnippet" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; overflow: auto; font-family: monospace; color: #fff; font-size: 1rem; line-height: 1.5; transition: all 0.3s ease;">
+    # Python program to demonstrate basic features
+    
+    # Function to greet a user
+    def greet(name):
+        return f"Hello, {name}!"
+    
+    # List of names
+    names = ["Alice", "Bob", "Charlie"]
+    
+    # Loop through each name and greet them
+    for name in names:
+        print(greet(name))
+    
+    # Function to add two numbers
+    def add(a, b):
+        return a + b
+    
+    # Example usage
+    result = add(5, 10)
+    print(f"Result of addition: {result}")
+            </pre>
+            
+            <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center;">
+                <button onclick="copyToClipboard('pythonSnippet')" style="padding: 12px 20px; background: #ff6ec4; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Copy</button>
+                <button onclick="togglePythonBackground()" style="padding: 12px 20px; background: #7873f5; color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; transform: scale(1);"
+                    onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Toggle Background</button>
+            </div>
+            
+            <h3 style="margin-top: 20px; color: #fff; font-size: 1.5rem;">Explanation:</h3>
+            <ul style="color: #fff; font-size: 1rem; line-height: 1.5;">
+                <li><strong>Function Definition</strong>: The <code>greet</code> function takes a name as an argument and returns a greeting string.</li>
+                <li><strong>List</strong>: A list of names is created to demonstrate looping through a collection.</li>
+                <li><strong>Looping</strong>: The program loops through the names list and prints a greeting for each name.</li>
+                <li><strong>Add Function</strong>: The <code>add</code> function takes two numbers as arguments and returns their sum.</li>
+                <li><strong>Example Usage</strong>: The <code>add</code> function is called with the numbers 5 and 10, and the result is printed.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        function togglePythonBackground() {
+            const snippet = document.getElementById('pythonSnippet');
+            if (snippet.style.background === 'rgba(255, 255, 255, 0.1)') {
+                snippet.style.background = '#f0f0f0';
+                snippet.style.color = '#333';
+            } else {
+                snippet.style.background = 'rgba(255, 255, 255, 0.1)';
+                snippet.style.color = '#fff';
+            }
+        }
+    </script>
+    
+
+
+<footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Be a Coder. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+
+
+
+        </script>
+</body>
+</html>
